@@ -47,6 +47,8 @@
 <%= render partial: 'comment', collection: @article.comments.reverse, :locals => { :list => true } %>
 
  <% if logged_in? %>
+ <%= link_to "New Task", new_task_path, id: "new_link", remote: true %>
+
  <%= render partial: 'comments/form' %> <table>
       </br>
       <tr>
