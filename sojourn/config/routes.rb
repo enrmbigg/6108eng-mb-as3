@@ -27,7 +27,7 @@ match 'signout', to: 'sessions#destroy', as: 'signout'
   
   get "events/index"
   get "articles/index"
-  
+  get "welcome/Gallery"
  
 	  resources :articles
 	  resources :comments

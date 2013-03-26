@@ -9,7 +9,24 @@
 	<%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" %>
  
 	 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
-
+<style>
+       
+        .con {
+            width: 90%;
+            margin: 20px auto;
+            background-color: #FFF;
+            padding: 20px;
+        }
+      .other { height: 300px; color: #FFF; }
+      .other div {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: #000;
+        background: rgba(0,0,0,0.7);
+      }
+      .other div p { padding: 10px; }
+    </style>
 
 	<%= csrf_meta_tags %>
 	<p class="flash"><%= flash.notice %></p>
@@ -18,6 +35,10 @@ auto_discovery_link_tag(:atom,
 articles_url(format: "atom")) %>
 
 
+ <script>
+        $.backstretch(["../assets/ski1.png"]);
+      $(".other").backstretch("./assets/skiing5.jpg");
+  </script>
  <meta charset="UTF-8" />
         
        
@@ -25,14 +46,10 @@ articles_url(format: "atom")) %>
         <meta name="keywords" content="jquery, css3, responsive, image, slider, slideshow, thumbnails, preview, elastic" />
         <meta name="author" content="Michael Biggs" />
         <link rel="shortcut icon" href="../../assets/favicon.ico"> 
-       
-	
+      
 </head>
-<div class="sidebar">å
-		<h6>
-			
-		</h6>
-	</div></head>
+
+
 	 <div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
@@ -92,13 +109,12 @@ articles_url(format: "atom")) %>
 
 <div class="container">
 
-						 
-<body>
-	
-							 
-	
+
 			<%= yield %>
 	
+	<div class ="well">
+
+</div>
 				<hr>
 			<div class="container">
 			<div class="well">
@@ -152,8 +168,8 @@ articles_url(format: "atom")) %>
 </html>
 	<!-- Placed at the end of the document so the pages load faster -->
 			<!-- jQuery via Google + local fallback, see h5bp.com -->
-			
-					<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+					<script src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
+								<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 					<script>window.jQuery || document.write('<script src="assets/js/jquery-1.7.2.min.js"><\/script>')</script>
 					<script src="http://connect.facebook.net/en_US/all.js"></script>
 

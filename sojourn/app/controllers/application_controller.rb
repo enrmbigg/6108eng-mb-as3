@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   private
-def current_user
+def active_user
 @author ||= Author.find(session[:user_id]) if session[:user_id]
 end
 
