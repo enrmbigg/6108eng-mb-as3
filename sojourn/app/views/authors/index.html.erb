@@ -1,0 +1,55 @@
+<div class="container">
+      <div class="well">
+     <div class="leaderboard">     
+        <h1>Listing authors</h1>
+       </div>
+    </div>
+  </div>
+
+<div class="container">
+    <div class="well">
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Email</th>
+
+    
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @authors.each do |author| %>
+  <tr>
+    <td><%= author.username %></td>
+    <td><%= author.email %></td>
+   </table>
+    <table>
+    <% if logged_in? %>
+        <!-- <td><%= link_to 'Show', author %></td> -->
+        <!-- isnt a reason to be able to show user -->
+        <td><%= link_to 'Edit', edit_author_path(author) %></td>
+        <td></td>
+        <td></td>
+        <td><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       <% else %>
+   
+      <% end %>
+    
+  </tr>
+<% end %>
+</table>
+</div>
+    </div>
+
+<br />
+<div class="container">
+    <div class="well">
+  <% if logged_in? %>
+       Create <%= link_to 'New Author', new_author_path %>!!
+       <% else %>
+   
+      <% end %>
+      </div>
+    </div>
+

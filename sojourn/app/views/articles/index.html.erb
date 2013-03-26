@@ -1,0 +1,45 @@
+
+<div class="container">
+      <div class="well">
+     <div class="leaderboard">     
+      <h1>Annoucements</h1>
+       </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="well">
+<ul>
+
+<% @articles.each do |article| %>
+  
+    <li>
+    <h3><%= article.title %></h3>
+    
+    
+    
+      </br>
+      <span class="badge badge-success"><%= article.created_at.strftime("%m/%d/%Y %H:%M")%></span>
+    <span class="badge badge-label"><%= article.updated_at.strftime("%m/%d/%Y %H:%M")%>
+    </span>
+  </br>
+    <table>
+      </br>
+      <tr>
+    <td><%= button_to 'Show', article, :id => "open-contacts-dialog-btn",:class => "inbox-sf-add-btn tip", :method => :get %></td>
+    <% if logged_in? %>
+    <td><%= button_to 'Edit', edit_article_path(article), :id => "open-contacts-dialog-btn",:class => "inbox-sf-add-btn tip", :method => :get %></td>
+    <td><%= button_to 'Destroy', article,:id => "open-contacts-dialog-btn",:class => "inbox-sf-add-btn tip", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    
+      <% end %>
+    <!--   <% if current_user %>
+      <td><%= button_to 'Edit', edit_article_path(article), :id => "open-contacts-dialog-btn",:class => "inbox-sf-add-btn tip", :method => :get %></td>
+    <td><%= button_to 'Destroy', article,:id => "open-contacts-dialog-btn",:class => "inbox-sf-add-btn tip", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %> -->
+
+  
+  </tr></table>
+<% end%>
+<br/>
+</div>
+

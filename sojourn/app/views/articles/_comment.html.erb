@@ -1,0 +1,7 @@
+<div class="comment">
+  <h4><%= comment.author_name %> Said:</h4>
+ <%= content_tag(:p, comment.body, :class => "comment-body") %>
+<span class="dateandoptions">
+  <p>Posted <%=time_ago_in_words(comment.created_at)%> ago
+</p></span>
+</div>

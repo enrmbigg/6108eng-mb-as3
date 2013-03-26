@@ -1,0 +1,36 @@
+<div class="container">
+      <div class="well">
+     <div class="leaderboard"> 
+<p id="notice"><%= notice %></p>
+
+<h1>
+  
+  <%= @event.title %>
+<h1>
+     </div>
+    </div>
+  </div>
+  <div class="container">
+  <div class="well">
+<p>
+  
+  <%= @event.body %>
+</br>
+<% if logged_in? %>
+<%= button_to 'Edit', edit_event_path(@event),:id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get  %>
+       <%else%>
+    <%end%>
+    <br/>
+       <span class="badge badge-success"><%= @event.created_at.strftime("%m/%d/%Y %H:%M")%></span>
+    <span class="badge badge-label"><%= @event.updated_at.strftime("%m/%d/%Y %H:%M")%></span>
+
+</p>
+ </div>
+    </div>
+<div class="container">
+  <div class="well">
+<%= button_to 'Back', events_path,:id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get  %>
+    </div>
+

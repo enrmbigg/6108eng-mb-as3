@@ -1,0 +1,31 @@
+<div class="container">
+      <div class="well">
+     <div class="leaderboard">    
+      <h1>Tag index</h1>
+     </div>
+ </div>
+</div>
+<div class="container">
+      <div class="well">
+<p>List of tags currently in use</p>
+</div>
+</div>
+<div class="container">
+      <div class="well">
+<table><ul><% cur_letter = nil %>
+<% @tags.each do |t| %>
+  <% tag_letter = t.name[0].capitalize.match(/[A-Z]/) ? t.name[0].capitalize : "#" %> 
+  <% if tag_letter != cur_letter %>
+    <% cur_letter = tag_letter %>
+    <li>
+    <b><%= cur_letter %></b>
+</li>
+  <% end %>
+<p><%= t.name%>:
+  <% t.articles.each do |t| %>
+  <%= link_to t.title, articles_path(t) %>
+  <% end %> </p>
+<% end %>
+</ul></table>
+</div>
+</div>

@@ -1,0 +1,79 @@
+ <body>
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+      <!--div class="page-header"-->
+      
+        <h1>Merseyside's Biggest Skiing Facilty!!</h1><br>
+        <p>The Oval Ski Club is based at the dry ski slope, located towards the rear of the Oval Sports Centre, Bebington, Wirral. For more information on locality of the skiing club please visit the Contact Us page. We offer skiing tuition for all ages, an active social club promoting various events through out the year, and also a Ski Racing Team which all members are welcome to join. We are ideally located for the Wirral, Cheshire, Liverpool and Merseyside areas.</p>
+       
+        
+      </div>
+
+
+<div class="container">
+    <div class="row-fluid">
+    <div class="span5">
+    
+      
+    
+      <div class="well">
+      <img src="../assets\skiing.jpg" alt="Epic Skiing">
+      <h3>Never skiied before? Don't let this stop you joining the club!</h3>
+      <p>We provide lessons through out the season to all of our club members including people who have never skied before. For complete beginners these blocks of lessons start approx. every three weeks - see list below for starting dates. So if you are new to skiing and interested in joining the club then just turn up early on the starting date to enroll!!</p>
+    </div>
+    
+    <div class="well">
+               <a class="twitter-timeline" href="https://twitter.com/OvalSkiClubTEST" data-widget-id="306092269600120832">Tweets by @OvalSkiClubTEST</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+          
+      </div>
+  </div>
+    </fluid>
+<!--div class="row-inline"-->
+<div class="container">
+  <div class="row-fluid">
+      <div class="span5 offset2">
+        <div class="well">
+          <h2>Weather</h2>
+    <script language="JavaScript" src="http://www.feedroll.com/rssviewer/feed2js.php?src=http%3A%2F%2Fweather.yahooapis.com%2Fforecastrss%3Fw%3D26734&chan=y&desc=1&utf=y"  charset="UTF-8" type="text/javascript"></script>
+
+        </div>
+<div class="well">
+          <h2>Events</h2>
+          <ul>
+           <% @events.each do |event| %>
+  
+    <li><%= link_to event.title, event_path(event) %></li>
+
+   
+    </br>
+    <% end %>
+           </ul>
+
+        </div>
+        <div class="well">
+          <h2>Annoucements</h2>
+          <ul>
+           <% @articles.each do |event| %>
+  
+    <li><%= link_to event.title, article_path(event) %></li>
+
+   
+    </br>
+    <% end %>
+           </ul>
+
+        </div>
+        </div>
+     </fluid>
+      </div>
+          
+      </div>
+      </div>
+      
+      </div>
+        </div>
+      </body>

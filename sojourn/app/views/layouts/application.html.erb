@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Oval Ski Club</title>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+
+
+	<%= javascript_include_tag "application", :media => "all"%>
+	<%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" %>
+ 
+	 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
+
+
+	<%= csrf_meta_tags %>
+	<p class="flash"><%= flash.notice %></p>
+ <% content_for :head,
+auto_discovery_link_tag(:atom, 
+articles_url(format: "atom")) %>
+
+
+ <meta charset="UTF-8" />
+        
+       
+        <meta name="description" content="Elastic Image Slideshow with Thumbnail Preview" />
+        <meta name="keywords" content="jquery, css3, responsive, image, slider, slideshow, thumbnails, preview, elastic" />
+        <meta name="author" content="Michael Biggs" />
+        <link rel="shortcut icon" href="../../assets/favicon.ico"> 
+       
+	
+</head>
+<div class="sidebar">å
+		<h6>
+			
+		</h6>
+	</div></head>
+	 <div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="../../welcome/index"><img src="../../assets/osc.png" alt="Oval Ski Club"></a>
+					<div class="container nav-collapse">
+						<ul class="nav">
+							<li class="">
+								<a href="../../welcome/aboutus" accesskey="2">About Us</a>
+							</li>
+							<li class="">
+								<a href="../../welcome/contactus" accesskey="3">Contact Us</a>
+							</li>
+							<li class="">
+								<a href="../../events/index" accesskey="4">Social Events</a>
+							</li>
+							<li class="">
+								<a href="../../articles/index" accesskey="5">Annoucements</a>
+							</li>
+							<li class="">
+								<a href="../../welcome/club" accesskey="6">Club</a>
+							</li>
+							 <li class="">
+								<a href="../../welcome/holiday " accesskey="7">Holiday</a>
+							</li>
+									 
+							<li class"">
+								<%if logged_in? %>
+							
+							 <%= link_to "Logout", logout_path %>
+							</li>
+							 <% else %>
+							<% if active_user %>
+							</li>
+							<li class"">
+							<%= link_to "Logout", signout_path, id: "sign_out" %>
+							<% else %>
+						
+									<%= link_to "Login", login_path %>
+									<% end %>
+							 <% end %>
+								 </li>
+								<div id="search">
+    
+  </div>						
+						 
+					</div>
+				</div>
+			</div>
+		</div>
+		<br></br>
+
+
+<div class="container">
+
+						 
+<body>
+	
+							 
+	
+			<%= yield %>
+	
+				<hr>
+			<div class="container">
+			<div class="well">
+		
+			<center>
+		<div class"container">
+								<div id="user_nav">
+										<%if logged_in? %>
+												Signed In! Welcome<strong> <%= current_user.username.capitalize %></strong>!
+										 <button class="btn"> <%= link_to "Logout", logout_path %><Middle</button>
+										 <%else%>
+										<% if active_user %>
+											Signed In! Welcome<strong> <%= active_user.name %></strong>!
+											<button class="btn"><%= link_to "Logout", signout_path, id: "sign_out" %><Middle</button>
+												<% else%> 
+											 
+											<button class="btn"><%= link_to "Login", login_path %><Middle</button>
+									
+										 <% end %>
+										 <%end%>
+									
+								</div>
+							</div>
+	
+								 
+
+								 
+					 <footer>
+						<center>
+						<iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/groups/2256597544/"
+				scrolling="no" frameborder="0"
+				style="border:none; width:200px; height:30px"></iframe></center>
+		 
+				<a href="https://twitter.com/OvalSkiClubTEST" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @OvalSkiClubTEST</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+				<p><%= link_to "Home", root_path %>|<a href="../../welcome/aboutus" accesskey="2">About Us</a>|<a href="../../welcome/contactus" accesskey="3">Contact Us</a>|<a href="../../events/index" accesskey="4">Social Events</a>|<a href="../../annoucements/index" accesskey="5">Annoucements</a>|<a href="../../welcome/club" accesskey="6">Club</a>|<a href="../../welcome/holiday " accesskey="7">Holiday</a>|<a href=".././tags/index" accesskey="9">Index</a><br/>
+					<%= link_to image_tag('feed-icon-28x28.png'), articles_url(format: :atom) %></p>
+				<p>  &copy; Oval Ski Club, Oval Sports Centre, Bebington, Wirral, Liverpool, Merseyside, CH63 7LF</p>
+				<p>By Michael Biggs</p> 
+
+
+
+			</footer>
+	 </center>
+
+	 
+	</body>
+</div>
+</div>
+</html>
+	<!-- Placed at the end of the document so the pages load faster -->
+			<!-- jQuery via Google + local fallback, see h5bp.com -->
+			
+					<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+					<script>window.jQuery || document.write('<script src="assets/js/jquery-1.7.2.min.js"><\/script>')</script>
+					<script src="http://connect.facebook.net/en_US/all.js"></script>
+
+

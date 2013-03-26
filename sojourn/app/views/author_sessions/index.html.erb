@@ -1,0 +1,23 @@
+<h1>Listing author_sessions</h1>
+
+<table>
+  <tr>
+    <th>Controller</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @author_sessions.each do |author_session| %>
+  <tr>
+    <td><%= author_session.controller %></td>
+    <td><%= link_to 'Show', author_session %></td>
+    <td><%= link_to 'Edit', edit_author_session_path(author_session) %></td>
+    <td><%= link_to 'Destroy', author_session, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Author session', new_author_session_path %>

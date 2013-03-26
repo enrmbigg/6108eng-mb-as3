@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+      <div class="well">
+     <div class="leaderboard">     
+      <h1>  <%= @article.title %></h1>
+       </div>
+    </div>
+  </div>
+<div class="container">
+  <div class="well">
+<p><p><b>Tags:</b> <%= tag_links(@article.tags) %></p></br>
+	<% if @article.image.exists? %>
+    	<%= image_tag @article.image.url(), :id =>"Photo" %></br>
+  <%end%>
+</p>
+<p>
+  <b></b>
+  <%= @article.body %>
+</p>
+</br>
+
+</div>
+</div>
+
+<div class="container">
+  <div class="well">
+
+<table>
+      </br>
+      <tr>
+         <% if logged_in? %>
+    <td><%= button_to 'Edit', edit_article_path(@article), :id => "open-contacts-dialog-btn",:class => "inbox-sf-add-btn tip", :method => :get %></td>
+   <td> <%= button_to 'Destroy', @article,:id => "open-contacts-dialog-btn",:class => "inbox-sf-add-btn tip", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
+       
+ <td><%= button_to 'Back', articles_path, :id => "open-contacts-dialog-btn",:class => "inbox-sf-add-btn tip", :method => :get %></td>
+</tr>
+</table>
+
+</div>
+</div>
+<div class="container">
+  <div class="well">
+
+<h3>Comments (<%= @article.comments.size %>)</h3>
+
+<%= render partial: 'comment', collection: @article.comments.reverse, :locals => { :list => true } %>
+
+ <% if logged_in? %>
+ <%= render partial: 'comments/form' %> <table>
+      </br>
+      <tr>
+    <td><%= button_to 'Edit', edit_article_path(@article), :id => "open-contacts-dialog-btn",:class => "inbox-sf-add-btn tip", :method => :get %></td>
+   <td> <%= button_to 'Destroy', @article,:id => "open-contacts-dialog-btn",:class => "inbox-sf-add-btn tip", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      <% end %>
+       
+ <td><%= button_to 'Back', articles_path, :id => "open-contacts-dialog-btn",:class => "inbox-sf-add-btn tip", :method => :get %></td>
+</tr>
+</table>
+</div>
+</div>
