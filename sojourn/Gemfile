@@ -40,3 +40,4 @@ gem 'omniauth-facebook'
 # To use debugger
 # gem 'debugger'
 gem 'flickr.rb'
+gem 'ransack'
