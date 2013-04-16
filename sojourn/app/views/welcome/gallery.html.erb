@@ -1,0 +1,41 @@
+<div class="container">
+
+        <div class="well">
+<div class="leaderboard">   
+
+
+        <h1>Gallery</h1>
+      
+                      
+      </div>
+    </div>
+         
+        </div>
+
+   
+
+        <div id="slideshow">
+
+  <ul class="slides">
+    <% @articles.each do |article| %>
+        
+           <% if article.image.exists? %>
+                <li><%= image_tag article.image.url(), :id => article.title %></li>
+            <%else%>
+      
+        <li><img src="../assets/skiing2.jpg" alt="Scenery" /></li>
+       <%end%>
+           <%end%>
+    </ul>
+
+    <span class="arrow previous"></span>
+    <span class="arrow next"></span>
+</div>
+
+
+       <br/>
+       <br/>
+     
+ 
+   
+   

@@ -40,6 +40,11 @@
   
   </tr></table>
 <% end%>
+ <% if logged_in? %>
+<%= button_to 'New Annoucement', new_article_path,:id => "open-contacts-dialog-btn",:class => "inbox-sf-add-btn tip", :method => :get %>
+<% else %>
+ <% end %>
+
 <br/>
 </div>
 

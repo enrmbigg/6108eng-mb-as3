@@ -3,25 +3,15 @@ class EventsController < ApplicationController
   # GET /events.json
   before_filter :require_login, except: [:index, :show]
   def index
-  # @events = Event.all
-  #   respond_to do |format|
-  #     format.html # index.html.erb
-  #     format.json { render json: @events }
 
-  #   end
-
-  @search = Event.search(params[:q])
-  @events = @search.result
-  @search.build_condition if @search.conditions.empty?
-  @search.build_sort if @search.sorts.empty?
-
+   @events =  Event.all.reverse
+ 
   end
 
   # GET /events/1
   # GET /events/1.json
   def show
     @event = Event.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @event }

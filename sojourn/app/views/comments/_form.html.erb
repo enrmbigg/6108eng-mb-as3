@@ -14,8 +14,7 @@
     <%= f.submit 'Submit' %>
   </p>
 <% end %> -->
-
-
+<div class="alert alert-success" class="flash"><%= flash.notice %></div>
 <h3>Say something!</h3>
 <%= form_for @comment do |f| %>
 <%= f.hidden_field :article_id %>

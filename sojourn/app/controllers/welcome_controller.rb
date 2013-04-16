@@ -15,4 +15,7 @@ class WelcomeController < ApplicationController
   end
   def holiday
   end
+  def gallery
+    @articles = Article.all.reverse
+  end
 end

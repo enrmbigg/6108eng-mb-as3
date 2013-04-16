@@ -6,8 +6,11 @@ def create
   @comment.article_id = article_id
   @comment.save
  flash[:notice] = "Thanks for commenting!"
-  redirect_to article_path(@comment.article)
-
+  respond_to do |format|
+    format.html { redirect_to article_path(@comment.article) }
+    format.js
+  
 end
 
+end
 end

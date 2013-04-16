@@ -5,18 +5,6 @@ match 'auth/:provider/callback', to: 'sessions#create'
 match 'auth/failure', to: redirect('/')
 match 'signout', to: 'sessions#destroy', as: 'signout'
 
-resources :events do
-  collection { post :search, to: 'events#index' }
-end
-  resources :authentications
-
-
-  resources :statuses
-
-
-  resources :annoucements
-
-
   get "tags/index"
   get "tags/show"
   get "articles/index"
@@ -26,11 +14,12 @@ end
   get "welcome/club"
   get "welcome/login"
   get "welcome/holiday"
-  
+  get "welcome/gallery"
   get "events/index"
-  get "articles/index"
-  get "welcome/Gallery"
  
+  
+    resources :authentications
+    resources :statuses
 	  resources :articles
 	  resources :comments
 	  resources :tags
