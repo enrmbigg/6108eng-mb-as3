@@ -1,6 +1,6 @@
 *{
-	margin:0;
-	padding:0;
+/*	margin:0;
+	padding:0;*/
 }
 
 
@@ -8,10 +8,12 @@
 	background-color:#F5F5F5;
 	border:1px solid #FFFFFF;
 	height:340px;
-	margin:150px auto 0;
+	margin:/*150px*/ auto 0;
 	position:relative;
-	width:640px;
+	width:515px;
 	
+   
+   
 	-moz-box-shadow:0 0 22px #111;
 	-webkit-box-shadow:0 0 22px #111;
 	box-shadow:0 0 22px #111;

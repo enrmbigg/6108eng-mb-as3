@@ -6,12 +6,20 @@ class Article < ActiveRecord::Base
   has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>"}
 
 
+  def self.search(search)
+  if search
+    find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+  else
+    find(:all)
+  end
+end
 
 	def tag_list
 		self.tags.collect do |tag|
 		tag.name
 		end.join(", ")
 	end
+
 	def tag_list=(tags_string)
 		self.taggings.destroy_all
 		tag_names = tags_string.split(",").collect{|s| s.strip.downcase}.uniq

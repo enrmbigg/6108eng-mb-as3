@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   before_filter :require_login, except: [:index, :show]
   def index
-    @articles = Article.all
+    @articles = Article.all.reverse
   end
 
   # GET /articles/1

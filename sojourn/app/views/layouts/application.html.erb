@@ -81,9 +81,7 @@ articles_url(format: "atom")) %>
 									<% end %>
 							 <% end %>
 								 </li>
-								<div id="search">
-    
-  </div>						
+						
 						 
 					</div>
 				</div>
@@ -107,14 +105,15 @@ articles_url(format: "atom")) %>
 			<center>
 		<div class"container">
 								<div id="user_nav">
-										<%if logged_in? %>
+										
+										<% if active_user %>
+											Signed In! Welcome<strong> <p>%= active_user.name %></p></strong>!
+											<button class="btn"><%= link_to "Logout", signout_path, id: "sign_out" %><Middle</button>
+												<% else%> 
+												<%if logged_in? %>
 												Signed In! Welcome<strong> <%= current_user.username.capitalize %></strong>!
 										 <button class="btn"> <%= link_to "Logout", logout_path %><Middle</button>
 										 <%else%>
-										<% if active_user %>
-											Signed In! Welcome<strong> <%= active_user.name %></strong>!
-											<button class="btn"><%= link_to "Logout", signout_path, id: "sign_out" %><Middle</button>
-												<% else%> 
 											 
 											<button class="btn"><%= link_to "Login", login_path %><Middle</button>
 									

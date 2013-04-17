@@ -9,12 +9,8 @@
                       
       </div>
     </div>
-         
-        </div>
-
-   
-
-        <div id="slideshow">
+    <div class= "well">
+         <div id="slideshow">
 
   <ul class="slides">
     <% @articles.each do |article| %>
@@ -23,7 +19,7 @@
                 <li><%= image_tag article.image.url(), :id => article.title %></li>
             <%else%>
       
-        <li><img src="../assets/skiing2.jpg" alt="Scenery" /></li>
+        <li><img src="../assets/skiing2.jpg" alt="Scenery" width ="446" height = "344" /></li>
        <%end%>
            <%end%>
     </ul>
@@ -31,11 +27,12 @@
     <span class="arrow previous"></span>
     <span class="arrow next"></span>
 </div>
+</div>
 
 
        <br/>
        <br/>
-     
+
  
-   
+         </div>
    
