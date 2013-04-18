@@ -47,23 +47,6 @@
     </div>
   </div>
 
-<div class ="container">
-
-<script>
-  (function() {
-    var cx = '010832589135108417510:hq6xkq6e1lm';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search>
-
-</div>
 
 
 <div class="container">
@@ -73,11 +56,10 @@
 <% @events.each do |event| %>
   
     <li>
-    <h3><%= event.title %></h3>
-    
-    <%= event.body %>
-    <br/>
-      </br>
+    <h3 rel="htmltooltip"><%= link_to event.title,event %></h3> 
+    <div class="htmltooltip"><%= event.description %></div>
+    <!-- <%= event.body %> -->
+ 
       <span class="badge badge-success"><%= event.created_at.strftime("%m/%d/%Y %H:%M")%></span>
     <span class="badge badge-label"><%= event.updated_at.strftime("%m/%d/%Y %H:%M")%></span>
   </br>
@@ -112,8 +94,7 @@
 <div class="container">
   <div class="well">
   <ul>For more information of any of the following you can contact our Social Sec: Jane by phone on either 0151 6084575 or 07963 906979, or email via jane.croft1@ntlworld.com</ul>
-<%= link_to "RSS Feed", events_url(format: :rss) %>
-<%= link_to "RSS Feed", events_url(format: :json) %>
+
 
 
 

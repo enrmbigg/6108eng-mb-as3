@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  attr_accessible :body, :title
+  attr_accessible :body, :title,:description
 
 # def self.search(search)
 #   if search

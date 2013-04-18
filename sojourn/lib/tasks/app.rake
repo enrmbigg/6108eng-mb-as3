@@ -38,7 +38,7 @@ namespace :app do
       Article.find_or_create_by_title_and_body(attributes)
     end      
   end
-   # Articles
+   # Events
   desc "Populate the database with development data"
   task populate: :environment do
     [ { title: "Competition",
@@ -49,6 +49,7 @@ namespace :app do
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
           culpa qui officia deserunt mollit anim id est laborum.",
+          description:"this is a test",
           },
       { title: "Summer!",
         body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
@@ -58,6 +59,7 @@ namespace :app do
         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
         culpa qui officia deserunt mollit anim id est laborum.",
+        description:"this is a test",
         }
     ].each do |attributes|
       Event.find_or_create_by_title_and_body(attributes)

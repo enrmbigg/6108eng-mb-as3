@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class WelcomeController - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/welcome_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-aboutus">#aboutus</a>
+    
+    <li><a href="#method-i-club">#club</a>
+    
+    <li><a href="#method-i-contactus">#contactus</a>
+    
+    <li><a href="#method-i-gallery">#gallery</a>
+    
+    <li><a href="#method-i-holiday">#holiday</a>
+    
+    <li><a href="#method-i-index">#index</a>
+    
+    <li><a href="#method-i-login">#login</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Article.html">Article</a>
+  
+    <li><a href="./ArticlesController.html">ArticlesController</a>
+  
+    <li><a href="./ArticlesHelper.html">ArticlesHelper</a>
+  
+    <li><a href="./Authentication.html">Authentication</a>
+  
+    <li><a href="./AuthenticationsController.html">AuthenticationsController</a>
+  
+    <li><a href="./AuthenticationsHelper.html">AuthenticationsHelper</a>
+  
+    <li><a href="./Author.html">Author</a>
+  
+    <li><a href="./AuthorSessionsController.html">AuthorSessionsController</a>
+  
+    <li><a href="./AuthorSessionsHelper.html">AuthorSessionsHelper</a>
+  
+    <li><a href="./AuthorsController.html">AuthorsController</a>
+  
+    <li><a href="./AuthorsHelper.html">AuthorsHelper</a>
+  
+    <li><a href="./Comment.html">Comment</a>
+  
+    <li><a href="./CommentsController.html">CommentsController</a>
+  
+    <li><a href="./CommentsHelper.html">CommentsHelper</a>
+  
+    <li><a href="./Event.html">Event</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./EventsHelper.html">EventsHelper</a>
+  
+    <li><a href="./SessionsController.html">SessionsController</a>
+  
+    <li><a href="./Status.html">Status</a>
+  
+    <li><a href="./StatusesController.html">StatusesController</a>
+  
+    <li><a href="./StatusesHelper.html">StatusesHelper</a>
+  
+    <li><a href="./Tag.html">Tag</a>
+  
+    <li><a href="./Tagging.html">Tagging</a>
+  
+    <li><a href="./TagsController.html">TagsController</a>
+  
+    <li><a href="./TagsHelper.html">TagsHelper</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./WelcomeController.html">WelcomeController</a>
+  
+    <li><a href="./WelcomeHelper.html">WelcomeHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class WelcomeController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-aboutus" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">aboutus</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="aboutus-source">
+            <pre><span class="ruby-comment"># File app/controllers/welcome_controller.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">aboutus</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- aboutus-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- aboutus-method -->
+
+    
+      <div id="method-i-club" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">club</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="club-source">
+            <pre><span class="ruby-comment"># File app/controllers/welcome_controller.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">club</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- club-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- club-method -->
+
+    
+      <div id="method-i-contactus" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">contactus</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="contactus-source">
+            <pre><span class="ruby-comment"># File app/controllers/welcome_controller.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">contactus</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- contactus-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- contactus-method -->
+
+    
+      <div id="method-i-gallery" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">gallery</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="gallery-source">
+            <pre><span class="ruby-comment"># File app/controllers/welcome_controller.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">gallery</span>
+  <span class="ruby-ivar">@articles</span> = <span class="ruby-constant">Article</span>.<span class="ruby-identifier">all</span>.<span class="ruby-identifier">reverse</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- gallery-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- gallery-method -->
+
+    
+      <div id="method-i-holiday" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">holiday</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="holiday-source">
+            <pre><span class="ruby-comment"># File app/controllers/welcome_controller.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">holiday</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- holiday-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- holiday-method -->
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/welcome_controller.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-ivar">@events</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">all</span>.<span class="ruby-identifier">reverse</span>
+  <span class="ruby-ivar">@articles</span> = <span class="ruby-constant">Article</span>.<span class="ruby-identifier">all</span>.<span class="ruby-identifier">reverse</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- index-method -->
+
+    
+      <div id="method-i-login" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">login</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="login-source">
+            <pre><span class="ruby-comment"># File app/controllers/welcome_controller.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">login</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- login-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- login-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

@@ -3,13 +3,32 @@
 <head>
 	<title>Oval Ski Club</title>
 	<%= stylesheet_link_tag    "application", :media => "all" %>
-
-
 	<%= javascript_include_tag "application", :media => "all"%>
 	<%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" %>
-	<%= javascript_include_tag 'jquery', 'application' %>
+	<%= javascript_include_tag "htmltooltip.js"%>
+	<%= javascript_include_tag 'jquery'%>
+	<%= javascript_include_tag "jquery-1.2.2.pack.js"%>
+	
  
 	 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
+
+
+
+<style type="text/css">
+
+div.htmltooltip{
+position: absolute; /*leave this and next 3 values alone*/
+z-index: 100;
+left: -1000px;
+top: -1000px;
+background: #272727;
+border: 10px solid black;
+color: white;
+padding: 3px;
+width: 300px; /*width of tooltip*/
+}
+
+</style>
 
 
 	<%= csrf_meta_tags %>
@@ -18,17 +37,12 @@
 auto_discovery_link_tag(:atom, 
 articles_url(format: "atom")) %>
 
-<script type="text/javascript">
-            $(document).ready(function() {
-                $('#digiclock').jdigiclock();
-            });
-        </script>
 
  <meta charset="UTF-8" />
         
        
-        <meta name="description" content="Elastic Image Slideshow with Thumbnail Preview" />
-        <meta name="keywords" content="jquery, css3, responsive, image, slider, slideshow, thumbnails, preview, elastic" />
+        <meta name="description" content="Expereince Snow Like Never Before!" />
+        <meta name="keywords" content="skiing, oval, ski, club, wirral, merseyside, snow" />
         <meta name="author" content="Michael Biggs" />
         <link rel="shortcut icon" href="../../assets/favicon.ico"> 
       
@@ -96,6 +110,13 @@ articles_url(format: "atom")) %>
 			<%= yield %>
 	
 	<div class ="well">
+<p id="demo" class= "">
+						</p>
+				
+
+<INPUT NAME="update" TYPE="BUTTON" VALUE="Revisit  Page" OnClick="history.go(0)">
+<INPUT NAME="reset" TYPE="BUTTON" VALUE="Reset Counter" OnClick="ResetCounts()">
+
 
 </div>
 				<hr>
@@ -106,19 +127,19 @@ articles_url(format: "atom")) %>
 		<div class"container">
 								<div id="user_nav">
 										
-										<% if active_user %>
-											Signed In! Welcome<strong> <p>%= active_user.name %></p></strong>!
-											<button class="btn"><%= link_to "Logout", signout_path, id: "sign_out" %><Middle</button>
-												<% else%> 
-												<%if logged_in? %>
-												Signed In! Welcome<strong> <%= current_user.username.capitalize %></strong>!
-										 <button class="btn"> <%= link_to "Logout", logout_path %><Middle</button>
-										 <%else%>
+										
+										<%if logged_in? %>
+														Signed In! Welcome<strong> <%= current_user.username.capitalize %></strong>!
+														<button class="btn"> <%= link_to "Logout", logout_path %><Middle</button>
+										<%else%>
+										 	<% if active_user %>
+														Signed In! Welcome<strong> <p>%= active_user.name %></p></strong>!
+														<button class="btn"><%= link_to "Logout", signout_path, id: "sign_out" %><Middle</button>
+											<% else%> 
 											 
-											<button class="btn"><%= link_to "Login", login_path %><Middle</button>
-									
-										 <% end %>
-										 <%end%>
+														<button class="btn"><%= link_to "Login", login_path %><Middle</button>
+											<% end %>
+										<%end%>
 									
 								</div>
 							</div>
@@ -136,7 +157,9 @@ articles_url(format: "atom")) %>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 				<p><%= link_to "Home", root_path %>|<a href="../../welcome/aboutus" accesskey="2">About Us</a>|<a href="../../welcome/contactus" accesskey="3">Contact Us</a>|<a href="../../events/index" accesskey="4">Social Events</a>|<a href="../../annoucements/index" accesskey="5">Annoucements</a>|<a href="../../welcome/club" accesskey="6">Club</a>|<a href="../../welcome/holiday " accesskey="7">Holiday</a>|<a href=".././tags/index" accesskey="9">Index</a><br/>
-					<%= link_to image_tag('feed-icon-28x28.png'), articles_url(format: :atom) %></p>
+					<%= link_to image_tag('feed-icon-orange.png'), events_url(format: :rss) %>
+					<%= link_to image_tag('feed-icon-blue.png'), articles_url(format: :atom) %>
+					<%= link_to image_tag('feed-icon-green.png'), events_url(format: :json) %></p>
 				<p>  &copy; Oval Ski Club, Oval Sports Centre, Bebington, Wirral, Liverpool, Merseyside, CH63 7LF</p>
 				<p>By Michael Biggs</p> 
 
@@ -144,6 +167,7 @@ articles_url(format: "atom")) %>
 
 			</footer>
 	 </center>
+
 
 	 
 	</body>
