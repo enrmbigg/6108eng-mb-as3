@@ -84,6 +84,7 @@ Website Pages Layout
     ----------------
 
     RSS Feeds can be found at the bottom of the page at the three icons.
+    There are XML RSS JSON Feeds to choose from, the are specifcally for the 
 
     Authentication
     ----------------

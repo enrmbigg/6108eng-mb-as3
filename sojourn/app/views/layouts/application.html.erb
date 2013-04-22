@@ -20,6 +20,7 @@ $(document).ready(function () {
   });
 });
 </script>
+
 <style type="text/css">
         div.gallery img 
         {
@@ -171,7 +172,7 @@ articles_url(format: "atom")) %>
 
 				<p><%= link_to "Home", root_path %>|<a href="../../welcome/aboutus" accesskey="2">About Us</a>|<a href="../../welcome/contactus" accesskey="3">Contact Us</a>|<a href="../../events/index" accesskey="4">Social Events</a>|<a href="../../annoucements/index" accesskey="5">Annoucements</a>|<a href="../../welcome/club" accesskey="6">Club</a>|<a href="../../welcome/holiday " accesskey="7">Holiday</a>|<a href=".././tags/index" accesskey="9">Index</a><br/>
 					<%= link_to image_tag('feed-icon-orange.png'), events_url(format: :rss) %>
-					<%= link_to image_tag('feed-icon-blue.png'), articles_url(format: :atom) %>
+					<%= link_to image_tag('feed-icon-blue.png'), events_url(format: :atom) %>
 					<%= link_to image_tag('feed-icon-green.png'), events_url(format: :json) %></p>
 				<p>  &copy; Oval Ski Club, Oval Sports Centre, Bebington, Wirral, Liverpool, Merseyside, CH63 7LF</p>
 				<p>By Michael Biggs</p> 

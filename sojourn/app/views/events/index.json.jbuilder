@@ -1,6 +1,6 @@
  json.channel do
     json.title "Events"
-    json.description "All the events avaliable"
+    json.description "All the Upcoming Events"
    json.link events_url(format: :rss)
     
     for event in @events
