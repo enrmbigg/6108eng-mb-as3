@@ -15,6 +15,7 @@
 <p>
   
   <%= @event.body %>
+  
 </br>
 <% if logged_in? %>
 <%= button_to 'Edit', edit_event_path(@event),:id => "open-contacts-dialog-btn",

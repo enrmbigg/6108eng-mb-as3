@@ -48,29 +48,28 @@ SetCookie("visit", visit, expdate, "/", null, false);
 var message;
 if(visit <= 10) 
 message="Welcome To Oval Ski Club!";
-if(visit <= 20 && visit > 10) 
+if(visit <= 30 && visit > 10) 
 message="Welcome Back!";
-if(visit <= 30 && visit > 20) 
+if(visit <= 50 && visit > 30) 
 message="Biggest Ski Club In Merseyside!";
-if(visit <= 50 && visit > 30)
+if(visit <= 70 && visit > 50)
 message="Why Dont You Become A Member?"; 
-if(visit <= 60 && visit > 30) 
+if(visit <= 90 && visit > 70) 
 message="Dont Forget To Check The Annoucments!";
-if(visit <= 70 && visit > 60) 
+if(visit <= 110 && visit > 90) 
 message="Keep Update To Date With The Latest Events!";
-if(visit <= 80 && visit > 70)
+if(visit <= 130 && visit > 110)
 message="Nothing But The Best Join OSC!"; 
-if(visit <= 90 && visit > 80) 
+if(visit <= 170 && visit > 130) 
 message="OSC Rules!";
-if(visit <= 110 && visit > 90)
+if(visit <= 200 && visit > 170)
 message="OSC 4 Life!"; 
-if(visit >= 111 ) 
+if(visit >= 201 ) 
 message="WOW You Made It This Far!";
 x=document.getElementById("demo");  // Find the element
-x.innerHTML=("\n"+"Your browser has visited this page               \n"
+x.innerHTML=("\n"+"Your browser has visited this website               \n"
             +"                              "+visit+"\n"
-            +"                          time(s)."+"\n"+"\n"
-            + " "+message);
+            +"                          time(s)."+"\n"+"\n");
 y = document.getElementById("tag")   // Find the element
 y.innerHTML =(message)
 }

@@ -1,4 +1,4 @@
-<%= form_for(@event) do |f| %>
+<%= form_for @event, :html => { :multipart => true } do |f| %>
   <% if @event.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
@@ -35,6 +35,23 @@
   </div>
   </div>
     </div>
+   <!--  <div class="newPaperclipFiles">
+        <%= f.fields_for :assets do |asset| %>
+              <% if asset.object.new_record? %>
+                 <%= asset.label :image, "Attach an Image" %><br />
+                 <%= asset.file_field :image %>
+           <% end %>
+       <% end %>
+</div>
+
+<div class="existingPaperclipFiles">
+       <% f.fields_for :assets do |asset| %>
+           <% unless asset.object.new_record? %>
+               <%= image_tag asset.object.image.url(:thumb) %></br>
+               <%= asset.label :image, "Attach an Image" %><br />
+               <%= asset.file_field :image %>
+          <% end %>        
+     <% end %> -->
   <div class="container">
   <div class="well">
   <div class="actions">

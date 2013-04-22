@@ -2,10 +2,11 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   before_filter :require_login, except: [:index, :show]
-  def index
-
-   @events =  Event.all.reverse
- 
+ def index
+    @search = Event.search do
+    fulltext params[:search]
+  end
+  @events = @search.results
   end
 
   # GET /events/1
@@ -22,7 +23,7 @@ class EventsController < ApplicationController
   # GET /events/new.json
   def new
     @event = Event.new
-
+    5.times { @event.assets.build }
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @event }
@@ -32,6 +33,7 @@ class EventsController < ApplicationController
   # GET /events/1/edit
   def edit
     @event = Event.find(params[:id])
+    5.times { @event.assets.build }
   end
 
   # POST /events

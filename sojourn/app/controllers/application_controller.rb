@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   private
 def active_user
-@author ||= Author.find(session[:user_id]) if session[:user_id]
+@user ||= User.find(session[:user_id]) if session[:user_id]
 end
 
 helper_method :active_user

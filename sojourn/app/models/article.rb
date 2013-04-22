@@ -5,13 +5,19 @@ class Article < ActiveRecord::Base
   has_many :tags, through: :taggings
   has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>"}
 
-
-  def self.search(search)
-  if search
-    find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
-  else
-    find(:all)
+searchable do
+  text :title, :boost => 5
+  text :body
+  text :tags
+  text :comments do
+    comments.map(&:body)
   end
+time :created_at
+  string :publish_month
+end
+
+def publish_month
+  created_at.strftime("%B %Y")
 end
 
 	def tag_list

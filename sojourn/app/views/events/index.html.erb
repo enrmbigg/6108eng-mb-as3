@@ -8,95 +8,53 @@
     </div>
   </div>
            <!-- Carousel of pictures -->
-    <div class="container">
-      <div class="well">
-      <div id="myCarousel" class="carousel slide">
-        
-        <div class="carousel-inner">
-          <div class="active item">
-            <img src="../assets/skiing1.jpg" alt="Epic Skiing">
-            <div class="carousel-caption">
-              <span>
-              <h4>Epic Skiing</h4>
-              <p>Some things to expect once you start to handle the fast paced life of a skiier.</p>
-            </span>
-            </div>
-          </div>
-          <div class="item">
-            <img src="../assets/skiing2.jpg" alt="Scenery">
-            <div class="carousel-caption">
-              <span>
-              <h4>Scenery Of Last Holiday</h4>
-              <p>just one of the amazing scenes captured while skiing last holiday!!</p>
-            </span>
-            </div>
-          </div>
-          <div class="item">
-            <img src="../assets/skiing4.jpg" alt="Fast Paced Action">
-            <div class="carousel-caption">
-              <span><h4>Andy shows the kids how it's done!</h4>
-              <p>Just showing us kids how skiing is done by the professionals!!</p>
-            </span>
-            </div>
-          </div>
-        </div>
-        
-         <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-      </div>
-    </div>
-  </div>
+    
+<div class="container">
+ <div class="well">
+  <%= form_tag events_path, :method => :get do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
 
-
-
+</div>
+</div>
 <div class="container">
   <div class="well">
 <ul>
-
-<% @events.each do |event| %>
+    <div id ="eventss">
+<% for event in @events %>
   
     <li>
-    <h3 rel="htmltooltip"><%= link_to event.title,event %></h3> 
+    <h3 rel="htmltooltip"><%= link_to event.title, event %></h3> 
     <div class="htmltooltip"><%= event.description %></div>
-    <!-- <%= event.body %> -->
- 
+
       <span class="badge badge-success"><%= event.created_at.strftime("%m/%d/%Y %H:%M")%></span>
-    <span class="badge badge-label"><%= event.updated_at.strftime("%m/%d/%Y %H:%M")%></span>
+    <span class="badge badge-label"><%= event.updated_at.strftime("%m/%d/%Y %H:%M")%>
+    </span>
   </br>
     <table>
       </br>
       <tr>
-    <td><%= button_to 'Show', event, :id => "open-contacts-dialog-btn",:class => "inbox-sf-add-btn tip", :method => :get %></td>
+    
     <% if logged_in? %>
     <td><%= button_to 'Edit', edit_event_path(event), :id => "open-contacts-dialog-btn",:class => "inbox-sf-add-btn tip", :method => :get %></td>
     <td><%= button_to 'Destroy', event,:id => "open-contacts-dialog-btn",:class => "inbox-sf-add-btn tip", method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <% else %>
-      <td></td>
-      <td></td>
+    
       <% end %>
-
-  
-  </tr></table>
-  </li>
-<hr>
-<% end %>
-</ul>
-
-<br/>
-<ul>
-  <% if logged_in? %>
+     </tr></table>
+<% end%>
+ <% if logged_in? %>
 <%= button_to 'New Event', new_event_path,:id => "open-contacts-dialog-btn",:class => "inbox-sf-add-btn tip", :method => :get %>
 <% else %>
  <% end %>
-    </ul>
- </div>
-  </div>
+</div>
+<br/>
+</div>
+</div>
+
 <div class="container">
   <div class="well">
   <ul>For more information of any of the following you can contact our Social Sec: Jane by phone on either 0151 6084575 or 07963 906979, or email via jane.croft1@ntlworld.com</ul>
-
-
-
 
 </div>
 </div>

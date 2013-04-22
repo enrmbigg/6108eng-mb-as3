@@ -40,3 +40,5 @@ gem 'omniauth-facebook'
 # To use debugger
 # gem 'debugger'
 gem 'flickr.rb'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
