@@ -5,9 +5,8 @@ From the articles/events controllers all articles can be viewed, edited, deleted
 
 ‘application.html.erb’ in the ‘layouts’ folder contains the header and footer of each page thus not needing to put it in every single page. Keeps code DRY.
 
-Controllers
+Controllers Website Pages Layout
 
-        Website Pages Layout
         |-- Assets
         |   |-- images
         |   |-- stylesheets
