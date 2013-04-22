@@ -7,70 +7,70 @@ From the articles/events controllers all articles can be viewed, edited, deleted
 
 Controllers
 
-Website Pages Layout
-|-- Assets
-|   |-- images
-|   |-- stylesheets
-|   `-- javascripts
-|
-`--Views
-    |-- welcome 
-    |   |-- aboutus
-    |   |-- club
-    |   |-- gallery
-    |   |-- holiday
-    |   |-- index
-    |   `-- contactus
-    |       
-    |-- events
-    |   |-- _form
-    |   |-- edit
-    |   |-- index
-    |   |-- new
-    |   `-- show
-    |
-    |-- layouts
-    |   `-- application.html.erb    
-    |  
-    |-- articles
-    |   |-- _form
-    |   |-- edit
-    |   |-- index
-    |   |-- new
-    |   `-- show
-    |
-    |-- tags
-    |   |--index
-    |   `-- show
-    |
-    |-- comments
-    |   |-- _form
-    |   `-- create
-    |
-    |-- tags
-    |   |--index
-    |   `-- show
-    |
-    |-- authors
-    |   |-- _form
-    |   |-- edit
-    |   |-- index
-    |   |-- new
-    |   `-- show
-    |
-    |-- author_sessions
-    |   |-- _form
-    |   |-- edit
-    |   |-- index
-    |   |-- new
-    |   `-- show
-    |
-    `-- authentications
-        |-- _form
-        |-- edit
-        |-- index
-        |-- new
-        `-- show
+        Website Pages Layout
+        |-- Assets
+        |   |-- images
+        |   |-- stylesheets
+        |   `-- javascripts
+        |
+        `--Views
+            |-- welcome 
+            |   |-- aboutus
+            |   |-- club
+            |   |-- gallery
+            |   |-- holiday
+            |   |-- index
+            |   `-- contactus
+            |       
+            |-- events
+            |   |-- _form
+            |   |-- edit
+            |   |-- index
+            |   |-- new
+            |   `-- show
+            |
+            |-- layouts
+            |   `-- application.html.erb    
+            |  
+            |-- articles
+            |   |-- _form
+            |   |-- edit
+            |   |-- index
+            |   |-- new
+            |   `-- show
+            |
+            |-- tags
+            |   |--index
+            |   `-- show
+            |
+            |-- comments
+            |   |-- _form
+            |   `-- create
+            |
+            |-- tags
+            |   |--index
+            |   `-- show
+            |
+            |-- authors
+            |   |-- _form
+            |   |-- edit
+            |   |-- index
+            |   |-- new
+            |   `-- show
+            |
+            |-- author_sessions
+            |   |-- _form
+            |   |-- edit
+            |   |-- index
+            |   |-- new
+            |   `-- show
+            |
+            `-- authentications
+                |-- _form
+                |-- edit
+                |-- index
+                |-- new
+                `-- show
 
 
 
